@@ -8,14 +8,32 @@ resource "azurerm_kubernetes_cluster" "aks" {
     name       = "default"
     node_count = 1
     vm_size    = "Standard_D2_v2"
+    vnet_subnet_id = var.akssubnetid
+    os_sku = "Ubuntu"
   }
 
-  identity {
-    type = "SystemAssigned"
+ service_principal {
+   client_id = var.client_id
+   client_secret = var.client_secret
+ }
+
+  network_profile {
+    network_plugin="azure"
+  }
+
+  aci_connector_linux {
+    subnet_name = var.akssubnetname
+  }
+
+  ingress_application_gateway {
+  gateway_id = var.lbid
+
+  
   }
 
   tags = {
     Environment = "Production"
   }
 }
+
 

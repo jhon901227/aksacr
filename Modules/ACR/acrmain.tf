@@ -4,7 +4,7 @@ resource "azurerm_container_registry" "acr" {
   location            = var.rglocation_name
   sku                 = var.acr_sku
   admin_enabled       = false
-  georeplications {
+ /* georeplications {
     location                = "East US"
     zone_redundancy_enabled = true
     tags                    = {}
@@ -13,5 +13,5 @@ resource "azurerm_container_registry" "acr" {
     location                = "westeurope"
     zone_redundancy_enabled = true
     tags                    = {}
-  }
+  }*/
 }

@@ -6,6 +6,4 @@ dns_prefix="aksjohnfinalproject"
 aksname="aksjohnfinalproject"
 tagsaks={environment:"production"}
 vnetname="vnetjohn"
-#object_id="f3ddb6ff-2345-476f-af7e-3a2640c02be0"
-#secret_id="qXx7Q~M.1-Z1T.Lh0V0oTMvupkXQADWlZDJAl"
-#client_id="f3ddb6ff-2345-476f-af7e-3a2640c02be0"
+ports=["80","443"]

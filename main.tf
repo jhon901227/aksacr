@@ -22,6 +22,7 @@ module "vnet" {
   vnetname        = var.vnetname
   rglocation_name = var.rglocation_name
   rgname          = var.rgname
+  ports = var.ports
   depends_on = [
     module.base
   ]

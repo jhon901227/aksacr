@@ -39,3 +39,6 @@ variable "client_id" {
 variable "acr_secret" {
   
 }
+variable "ports" {
+  
+}
